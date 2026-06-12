@@ -57,7 +57,7 @@ function LoginForm() {
       const { error: oauthError } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: getOAuthRedirectUrl(returnUrl),
+          redirectTo: `${window.location.origin}/auth/callback`,
         },
       });
 
