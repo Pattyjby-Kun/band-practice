@@ -1,0 +1,12 @@
+-- Phase 4: FUTURE CLEANUP — DO NOT RUN YET
+--
+-- Prerequisites before executing:
+-- 1. Migrations 003 and 004 have been applied in production.
+-- 2. Application code no longer reads or writes songs.google_map_url.
+-- 3. All folders that need a location have practice_location_url populated.
+-- 4. Backup taken and rollback plan reviewed.
+--
+-- Rollback: re-add column and restore from backup if needed
+-- (data in songs.google_map_url is not automatically restored).
+
+-- ALTER TABLE songs DROP COLUMN IF EXISTS google_map_url;
